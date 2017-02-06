@@ -1,2 +1,15 @@
 <h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+
+<%if @posts.empty? %>
+   <p>글이 없습니다.</p>
+<%else%>
+  <%@posts.each do |p|%>
+    <p>
+      <a href="/posts/<%= p.id %>">제목: <%=p.title %></a>
+      <a href="/posts/<%= p.id %>/edit">[수정]</a>
+      <a href="/posts/<%= p.id %>" data-method="delete">[삭제]</a>
+    </p>
+  <%end%>
+<%end%>
+
+<a href="/posts/new" class="new-post">new post</a>
