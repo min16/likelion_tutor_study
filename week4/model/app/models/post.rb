@@ -3,7 +3,7 @@ class Post < ActiveRecord::Base
 
   before_save :filter
 
-  validates :title, presence: true, length: {maximum: 30, minimum: 2}
+  validates :title, presence: true, length: {in: 2..30}
   validates :content, presence: true
 
   def filter

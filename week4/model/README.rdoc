@@ -1,28 +1,73 @@
-== README
+User.rb
+==
+```
+class User < ActiveRecord::Base
+    before_save :capitalize_name
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+    validates :name, presence: true, length: {maximum: 10}
+    validates :age, presence: true, numericality: {only_integer: true}, length: {in: 20..29}
+    validates :mail, presence: true, uniqueness: true ,format: {with: /\A[\w+\-.]+@[a-z\d\-]+(\.[a-z]+)*\.[a-z]+\z/i }
 
-Things you may want to cover:
+    def capitalize_name
+      puts "capitalize"
+      self.name.capitalize!
+    end
+end
 
-* Ruby version
+```
 
-* System dependencies
+Post.rb
+==
 
-* Configuration
+```
+class Post < ActiveRecord::Base
+  belongs_to :user
 
-* Database creation
+  before_save :filter
 
-* Database initialization
+  validates :title, presence: true, length: {maximum: 30, minimum: 2}
+  validates :content, presence: true
 
-* How to run the test suite
+  def filter
+    self.content.gsub!(/fuck|hell|shit/,'****')
+  end
+end
 
-* Services (job queues, cache servers, search engines, etc.)
+```
 
-* Deployment instructions
+comment.rb
+==
 
-* ...
+```
+class Comment < ActiveRecord::Base
+  belongs_to :user
+  belongs_to :post
 
+  before_save :filter
 
-Please feel free to use a different markup language if you do not plan to run
-<tt>rake doc:app</tt>.
+  validates :content, presence: true, length: {maximum: 200}
+
+  def filter
+    self.content.gsub!(/fuck|hell|shit/,'****')
+  end
+end
+```
+
+group.rb
+==
+```
+class Group < ActiveRecord::Base
+  validates :name, presence: true, length: {maximum: 20}, uniqueness: true
+
+end
+```
+
+like.rb
+==
+
+```
+class Like < ActiveRecord::Base
+  belongs_to :user
+  belongs_to :post
+end
+```
