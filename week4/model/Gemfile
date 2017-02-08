@@ -1,4 +1,6 @@
 source 'http://rubygems.org'
+
+gem 'validates_email_format_of'
 gem 'awesome_print'
 gem 'pry-rails'
 gem 'rails_db'
