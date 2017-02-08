@@ -1,6 +1,6 @@
-User.rb
-==
-```
+#User.rb
+
+```ruby
 class User < ActiveRecord::Base
     before_save :capitalize_name
 
@@ -16,10 +16,10 @@ end
 
 ```
 
-Post.rb
-==
+#Post.rb
 
-```
+
+```ruby
 class Post < ActiveRecord::Base
   belongs_to :user
 
@@ -35,10 +35,10 @@ end
 
 ```
 
-comment.rb
-==
+#comment.rb
 
-```
+
+```ruby
 class Comment < ActiveRecord::Base
   belongs_to :user
   belongs_to :post
@@ -53,19 +53,19 @@ class Comment < ActiveRecord::Base
 end
 ```
 
-group.rb
-==
-```
+#group.rb
+
+```ruby
 class Group < ActiveRecord::Base
   validates :name, presence: true, length: {maximum: 20}, uniqueness: true
 
 end
 ```
 
-like.rb
-==
+#like.rb
 
-```
+
+```ruby
 class Like < ActiveRecord::Base
   belongs_to :user
   belongs_to :post
