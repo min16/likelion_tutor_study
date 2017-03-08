@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Float</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .parent {
+      width: 700px;
+      margin: 0 auto;
+      background-color: #e0eced;
+    }
+    .parent::after {
+      content: '';
+      display: block;
+      clear: left;
+    }
+    .child {
+      height: 150px;
+      color: #fff;
+      text-align: center;
+    }
+    .red {
+      float: left;
+      width: 100px;
+      background-color: #e74c3c;
+    }
+    .mini {
+      background-color: orange;
+    }
+    .yellow {
+      float: left;
+      background-color: #f1c40f;
+    }
+    .blue {
+      float: left;
+      background-color: #0066ff;
+    }
+    .other {
+      color: #fff;
+      background-color: rgba(0,0,0,0.6);
+
+    }
+  </style>
+</head>
+<body>
+  <div class="parent">
+    <div class="child red">Red</div>
+    <div class="child yellow">Yellow</div>
+    <div class="child blue">Blue</div>
+  </div>
+  <div class="other">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt vitae, perferendis nostrum. Autem earum incidunt voluptas natus sequi, veniam magni facere aspernatur voluptatem minus totam blanditiis deleniti ad qui voluptatibus.
+  </div>
+</body>
+</html>
