@@ -8,15 +8,13 @@ doc = Nokogiri::HTML(open("https://search.naver.com/search.naver?where=nexearch&
 lotto_number = doc.css(".num_box .num")
 
 lotto_number.each do |n|
-  numbers << n.inner_text.to_i
+  numbers << n.text.to_i
 end
-puts '<numbers>'
-puts numbers
+puts "numbers: #{numbers}"
 
 number_list = Array 1..45  #Array '1'..'45'
 sample = number_list.sample(7)
-puts '<sample>'
-puts sample
+puts "sample: #{sample}"
 
 match = Array.new
 
@@ -26,8 +24,5 @@ match = Array.new
   end
 end
 
-puts ''
-puts '<일치하는 번호>'
-puts match
-puts '<일치갯수>'
-puts match.size
+print "일치하는 번호: #{match}\n"
+puts "일치 갯수: #{match.size}"
