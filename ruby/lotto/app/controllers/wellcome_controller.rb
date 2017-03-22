@@ -4,7 +4,7 @@ class WellcomeController < ApplicationController
     lotto_number = array.sample(7)
     @lotto_images = Array.new
     lotto_number.each do |number|
-      @lotto_images << number.to_s + "jpg"
+      @lotto_images << "Lotto/" + number.to_s + ".jpg"
     end
   end
 end

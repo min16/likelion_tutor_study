@@ -1,5 +1,5 @@
 <h1>로또 추첨, 그냥 뽑기만하면 1등</h1>
 
-<% @lotto.each do |number| %>
-  <%= number %>
+<% 0.upto(@lotto_images.size-1) do |index| %>
+  <%= image_tag @lotto_images[index] %>
 <% end %>
