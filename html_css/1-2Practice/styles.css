@@ -1,0 +1,143 @@
+/* 드래그하면 생기는 효과 */
+::selection {
+   background: #444;
+   color: white;
+}
+
+* {
+  font-family: 'Spoqa Han Sans', sans-serif;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 15px;
+}
+
+a, a:link, a:visited, a:hover {
+  /* 링크 만들면 생기는 밑줄을 없앤다, 다른 효과 적용도 가능*/
+  text-decoration: none;
+}
+
+header nav a {
+  display: inline-block;
+  /* 좌우 내부 여백*/
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+header nav a, footer a {
+  color: white;
+  transition: 0.2s all ease-in-out;
+}
+
+/* HEADER */
+header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* 제일 상단에 항상 고정시켜놓자 */
+  background-color: #06f;  /* 배경색*/
+  color: white; /* 글자색 */
+  z-index: 99; /* 파워포인트로 치면 맨 앞으로 정렬*/
+  box-shadow: 0 0 10px rgba(0,0,0,0.8); /* 제목에 그림자 효과를 */
+}
+
+header h1, header nav {
+  /* header의 크기, 보통 제목과 내비게이션 높이를 조정할 때에는 height가 아닌 line-height를 사용한다.*/
+  line-height: 5rem;
+}
+
+/* 링크에 마우스를 올렸을 때 */
+header nav a:hover, footer a:hover {
+  color: yellow;
+  font-weight: 700;
+}
+
+/* MAIN */
+main {
+  /* 아래 내부 여백*/
+  padding-bottom: 50px;
+}
+
+.landing {
+  /* 웹브라우저 높이 전체만큼의 크기를 가지자*/
+  min-height: 100vh;
+  position: relative;
+  width: 100%;
+}
+
+.ld-title {
+  /* 정가운데에 배치하자 */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px; /* 폰트 크기 */
+  font-weight: 100; /* 폰트 굵기*/
+}
+
+/* SECTION */
+section {
+  padding-bottom: 40px;
+}
+
+.title {
+  color: orange;
+  margin-bottom: 40px;
+  padding-bottom: 20px;
+  border-bottom: 2px solid orange;
+}
+
+/* ARTICLE */
+#big_picture article img {
+  position: relative;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+/* Article 제목 */
+#big_picture article h4 {
+  font-weight: 100;
+  font-size: 36px;
+}
+
+/* LOTTO */
+.numbers {
+  text-align : center;
+  margin-bottom: 50px;
+}
+
+.numbers div {
+  font-size: 40px;
+  font-weight: 600;
+  color: green;
+}
+
+.numbers div:last-child {
+  color: red;
+}
+
+p.tip {
+  text-align: center;
+}
+
+/* FOOTER */
+footer {
+  /* 위 아래 내부 여백*/
+  padding-top: 50px;
+  padding-bottom: 50px;
+
+  background-color: dimgrey;
+  color: white;
+}
+
+address {
+  /* 글자 기울임을 원래대로*/
+  font-style: normal;
+}
+
+.container {
+  width: 1000px;
+  margin: 0 auto;
+}

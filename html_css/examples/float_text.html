@@ -8,7 +8,7 @@
       box-sizing: border-box;
     }
     .parent {
-      width: 700px;
+      width: 620px;
       margin: 0 auto;
       background-color: #e0eced;
     }
@@ -18,13 +18,14 @@
       clear: left;
     }
     .child {
-      height: 150px;
+      height: 200px;
+      width: 200px;
       color: #fff;
       text-align: center;
     }
     .red {
       float: left;
-      width: 100px;
+      /*width: 100px;*/
       background-color: #e74c3c;
     }
     .mini {
@@ -36,21 +37,15 @@
     }
     .blue {
       float: left;
-      background-color: #0066ff;
+      /*background-color: #0066ff;*/
+      color: black;
+      text-align: left;
+      margin: 0 10px;
     }
     .other {
       color: #fff;
       background-color: rgba(0,0,0,0.6);
 
-    }
-    span, p {
-      background-color: black;
-      color: white;
-      width: 100px;
-    }
-    p {
-      display: inline-block;
-      width: 100px;
     }
   </style>
 </head>
@@ -58,10 +53,12 @@
   <div class="parent">
     <div class="child red">Red</div>
     <div class="child yellow">Yellow</div>
-    <div class="child blue">Blue</div>
+    <div class="child blue">
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquid, sunt!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Similique, doloremque!</p>
+    </div>
   </div>
-  <div class="other">
+  <!-- <div class="other">
     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt vitae, perferendis nostrum. Autem earum incidunt voluptas natus sequi, veniam magni facere aspernatur voluptatem minus totam blanditiis deleniti ad qui voluptatibus.
-  </div>
+  </div> -->
 </body>
 </html>
