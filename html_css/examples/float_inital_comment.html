@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Float</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+    .parent {
+      /* 별도로 height 지정하지 않으면 자식의 boder-box만큼 height를 갖는다.*/
+      /* 궁금하면 개발자도구로 확인!! 자식의 height를 변경해보세요.*/
+      width: 700px;
+      margin: 0 auto;
+      background-color: #e0eced;
+    }
+    .child {
+      /* 별도로 width 지정하지 않으면 부모의 content-box만큼 width(700px)를 갖는다. */
+      /* 궁금하면 개발자도구로 확인!! 부모의 width를 변경해보세요.*/
+      height: 150px;
+      color: #fff;
+      text-align: center;
+    }
+    .red {
+      /* red만 float를 해보자!! */
+      /* yellow의 영역은 어떻게 되는지 개발자 도구로 확인. 특히 width값 */
+      /* red 클래스안에 내용(I am red)를 지워보자. 어떻게 되는가? */
+      /* 위 결과의 이유를 모르겠으면 토요일날 오세요!! ^_^ */
+      background-color: #e74c3c;
+    }
+    .yellow {
+      background-color: #f1c40f;
+    }
+    .blue {
+      background-color: #0066ff;
+    }
+    .other {
+      /* red, yellow, blue를 float하고 other가 어떻게 되는지 확인해보자 */
+      /* 결과가 왜 그렇게 되는지 몰겠으면 토요일날 오세요!! \^_^/ */
+      color: #fff;
+      background-color: rgba(0,0,0,0.6);
+    }
+  </style>
+</head>
+<body>
+  <h2>나는 가로배치가 하고싶다...</h2>
+  <div class="parent">
+    <div class="child red">I am red!</div>
+    <div class="child yellow">I am yellow!</div>
+    <div class="child blue">I am blue!</div>
+  </div>
+  <div class="other">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus corporis ea neque corrupti dolores eos, similique praesentium, in perspiciatis veniam, eligendi porro ipsam at? Nostrum placeat obcaecati dignissimos harum molestias!Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deserunt vitae, perferendis nostrum. Autem earum incidunt voluptas natus sequi, veniam magni facere aspernatur voluptatem minus totam blanditiis deleniti ad qui voluptatibus.
+  </div>
+</body>
+</html>
