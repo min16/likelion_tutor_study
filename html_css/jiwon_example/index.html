@@ -1,0 +1,81 @@
+<!DOCUMENT html>
+<html lang="ko">
+  <!--  문서의 정보를 기록합시다 -->
+  <head>
+    <!--  한글이 깨지면 슬프니까 ㅠㅠ-->
+    <meta charset="utf-8">
+    <title>BIG ISSUE</title>
+    <!-- 브라우저마다 기본적으로 가지는 속성 모두 해제 -->
+    <link rel="stylesheet" href="https://cdn.rawgit.com/filipelinhares/ress/master/dist/ress.min.css">
+    <!--  폰트는 그럴듯하게 -->
+    <link href='http://spoqa.github.io/spoqa-han-sans/css/SpoqaHanSans-kr.css' rel='stylesheet' type='text/css'>
+    <!-- 페이지에 디자인을 -->
+    <link rel="stylesheet" href="styles.css">
+    <!-- <link rel="stylesheet" href="my_style.css"> -->
+  </head>
+  <!--  실제 페이지에 나타낼 elements를 넣어야죠 -->
+  <body>
+    <header>
+      <!--  가운데 공간만 활용하기 위해 container를 사용한다 (어디까지나 정석아닌 테크닉) -->
+      <div class="container">
+        <!-- 로고 -->
+        <h1 class="nav-logo">BIG ISSUE</h1>
+        <!-- 내비게이션 -->
+        <nav>
+            <a href="./index.html">집</a>
+            <a href="http://intranet.aulikelion.club">인트라넷</a>
+            <a href="#big_picture">사진</a>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <!--  가운데 공간만 활용하기 위해 container를 사용한다 (어디까지나 정석아닌 테크닉) -->
+      <div class="container">
+        <section class="landing">
+          <h2 class="ld-title">We're Awesome.<br>We can do well.</h2>
+        </section>
+        <section class="lotto">
+          <h2 class="title">대박나세요</h2>
+          <div class="numbers">
+            <div>3</div>
+            <div>12</div>
+            <div>33</div>
+            <div>36</div>
+            <div>42</div>
+            <div>45</div>
+            <div>25</div>
+          </div>
+          <p class="tip">팁: 조만간 랜덤 숫자 뽑아서 지난 회차 로또 넘버랑 비교하기를 할거에요 ^~^</p>
+        </section>
+        <!--  여기에다 float를 활용해서 3단 컬럼 레이아웃을 짤 거에요~ -->
+        <section id="big_picture">
+          <h2 class="title">소식</h2>
+          <div class="items">
+            <article>
+              <img src="./images/이은재.jpg" alt="이은재의 빅픽쳐">
+              <h4><strong>이은재</strong>의<br>빅픽쳐</h4>
+            </article>
+            <article>
+                <img src="./images/봄.png" alt="봄이 왔네">
+                <h4><strong>봄</strong>이 왔네</h4>
+            </article>
+            <article>
+              <img src="./images/주호민.jpg" alt="파괴왕">
+              <h4>파괴왕 <strong>주호민</strong>,<br>어디까지<br>부술 것인가?</h4>
+            </article>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer>
+      <div class="container">
+        <img class="logo" src="./images/logo.png" alt="logo">
+        <div class="info">
+          <address>우리는 아직 집이 없다 ㅠㅠ</address>
+          <p>Hit me up : <a href="mailto:ajou@likelion.org">Email</a></p>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

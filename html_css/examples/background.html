@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html land="en">
+<head>
+  <meta charset="utf-8">
+  <title>background</title>
+  <style>
+    .header {
+      background-color: pink;
+      color: white;
+    }
+    .landing {
+      /* 이미지넣어준다 */
+      background-image: url('https://d2hmp4n7p97ldw.cloudfront.net/assets/home/slide/02-background-be82ae1605d3b8d909373f516e7aa593da9ab78ded7efd9177f94977d916b1c6.png');
+      /* 꼭 높이를 지정해줘야한다. */
+      height: 800px;
+      /* background 설정해준다. */
+      background-size: cover;
+      background-position: center;
+      /* slogan 영역을 중앙에 배치하기 위해 부모에게 relative를 줌*/
+      position: relative;
+    }
+    /* 내용물들을 중앙으로 모으고싶을때 container 만들어준다.*/
+    .container {
+      margin: 0 auto;
+      width: 80%;
+    }
+    .slogan {
+      color: #fff;
+      text-align: center;
+      font-size: 80px;
+      /* landing section의 정중앙으로 배치한다. 아래 4가지*/
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="container">
+      <h1>header</h1>
+    </div>
+  </header>
+  <section class="landing">
+    <div class="container slogan">
+      <p>Hack Your Life With Likelion</p>
+    </div>
+  </section>
+</body>
+</html>

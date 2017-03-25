@@ -1,0 +1,41 @@
+/* 여기에 작성할거에요 */
+
+/* common */
+.container {
+   margin: 0 auto;
+   width: 80%;
+}
+
+/* header */
+header {
+  background-color: blue;
+  color: white;
+  width: 100%;
+}
+
+
+header .container::after {
+  content: '';
+  display: block;
+  clear: both;
+}
+
+.nav-logo {
+  float: left;
+}
+
+nav {
+  float: right;
+}
+
+/* section-lotto */
+.lotto .numbers div {
+  display: inline-block;
+  width: 100px;
+  text-align: center;
+}
+
+/* section-big_picture */
+article {
+  width: 300px;
+}

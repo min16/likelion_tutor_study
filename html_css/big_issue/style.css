@@ -1,0 +1,72 @@
+/* common */
+* {
+  font-family: 'Spoqa Han Sans', 'Spoqa Han Sans JP', 'Sans-serif';
+  box-sizing: border-box;
+}
+
+::selection {
+  background-color: gray;
+  color: #fff;
+}
+
+ul {
+  list-style-type: none;
+}
+
+a, a:link, a:hover, a:visited {
+  text-decoration: none;
+}
+
+.header nav a, .footer a {
+  color: #fff;
+}
+
+.header nav a:hover, .footer a:hover {
+  font-weight: 600;
+}
+
+.container {
+  margin: 0 auto;
+  width: 80vw;
+}
+
+.readable-hidden {
+  font-size: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.header .container::after, .gnb::after{
+  content: '';
+  display: block;
+  clear: both;
+}
+
+/* header */
+.header {
+  width: 100%;
+  background-color: #06f;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  line-height: 4rem;
+}
+
+.title {
+  float: left;
+}
+
+nav{
+  float: right;
+}
+
+.gnb li{
+  float: left;
+  margin-left: 10px;
+}
+
+/* section-landing */
+.landing-title {
+  font-weight: 100;
+  font-size: 30px;
+}
