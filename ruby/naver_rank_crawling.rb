@@ -4,15 +4,15 @@ require 'open-uri'
 @ranks = Array.new
 
 doc = Nokogiri::HTML(open("http://www.naver.com"))
-rank_list = doc.css("#realrank li a .ell")
+rank_list = doc.css(".ah_item .ah_k")
 
 puts '<20위까지>'
 rank_list.each do |rl|
-  puts rl.inner_text
+  puts rl.text
 end
 
 1.upto(10) do |i|
-  @ranks << rank_list[i-1].inner_text
+  @ranks << rank_list[i-1].text
 end
 
 puts ''
