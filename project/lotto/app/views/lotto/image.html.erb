@@ -1,0 +1,25 @@
+<h1>추첨 결과를 보여줄 image view 입니다.</h1>
+
+<p>이번주 로또 번호는...
+  <% @drw_numbers.each do |d| %>
+    <%= image_tag "lotto/"+ d %>
+  <% end %>
+</p>
+<p>
+  보너스 번호는 <%= image_tag "lotto/" + @bonus_number %> 입니다.
+</p>
+
+<p>추첨한 로또 번호는...
+  <% @my_numbers.each do |n| %>
+    <%= image_tag "lotto/"+ n %>
+  <% end %>
+</p>
+
+<p>겹치는 번호는
+  <% @match_numbers.each do |m| %>
+    <%= image_tag "lotto/"+ m %>
+  <% end %>
+  입니다.
+</p>
+
+<p>결과는 <%= @result %> 입니다.</p>

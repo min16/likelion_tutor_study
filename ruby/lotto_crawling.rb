@@ -1,6 +1,6 @@
 require 'nokogiri'
 require 'open-uri'
-
+require 'openssl'
 
 numbers = Array.new
 sample = Array.new
